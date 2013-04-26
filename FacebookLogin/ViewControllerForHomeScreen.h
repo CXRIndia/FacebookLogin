@@ -22,9 +22,11 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "ViewControllerForFaceBookFriends.h"
 
 @interface ViewControllerForHomeScreen : UIViewController{
     
+    ViewControllerForFaceBookFriends *ViewControllerForFaceBookFriends_obj;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labelForFBUSerID;
 @property (strong, nonatomic) IBOutlet UILabel *labelForFBUserName;
@@ -32,5 +34,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelForFBUserEmail;
 
 - (IBAction)fnForLogOutButtonPressed:(id)sender;
+- (IBAction)fnForFBFriendsButtonPressed:(id)sender;
+- (IBAction)fnForFBAppFriendsButtonPressed:(id)sender;
 
 @end

@@ -59,6 +59,17 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)fnForFBFriendsButtonPressed:(id)sender
+{
+    ViewControllerForFaceBookFriends_obj=[[ViewControllerForFaceBookFriends alloc]initWithNibName:@"ViewControllerForFaceBookFriends" bundle:nil Friend_type:@"FB"];
+    [self presentViewController:ViewControllerForFaceBookFriends_obj animated:YES completion:nil];
+}
+- (IBAction)fnForFBAppFriendsButtonPressed:(id)sender
+{
+    ViewControllerForFaceBookFriends_obj=[[ViewControllerForFaceBookFriends alloc]initWithNibName:@"ViewControllerForFaceBookFriends" bundle:nil Friend_type:@"FBAPP"];
+    [self presentViewController:ViewControllerForFaceBookFriends_obj animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

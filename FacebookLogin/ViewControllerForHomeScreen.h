@@ -36,5 +36,6 @@
 - (IBAction)fnForLogOutButtonPressed:(id)sender;
 - (IBAction)fnForFBFriendsButtonPressed:(id)sender;
 - (IBAction)fnForFBAppFriendsButtonPressed:(id)sender;
+- (IBAction)fnForFBShareButtonPressed:(id)sender;
 
 @end

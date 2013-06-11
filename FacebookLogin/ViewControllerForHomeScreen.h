@@ -32,10 +32,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelForFBUserName;
 @property (strong, nonatomic) IBOutlet UILabel *labelForFBUserLastName;
 @property (strong, nonatomic) IBOutlet UILabel *labelForFBUserEmail;
+@property (strong, nonatomic) IBOutlet UIButton *buttonforShareManualPicture;
 
 - (IBAction)fnForLogOutButtonPressed:(id)sender;
 - (IBAction)fnForFBFriendsButtonPressed:(id)sender;
 - (IBAction)fnForFBAppFriendsButtonPressed:(id)sender;
 - (IBAction)fnForFBShareButtonPressed:(id)sender;
-
+- (IBAction)fnForPicUploadButtonPressed:(id)sender;
+- (IBAction)fnForManualPicUploadButtonPressed:(id)sender;
 @end

@@ -31,6 +31,7 @@
 @synthesize labelForFBUSerID;
 @synthesize labelForFBUserLastName;
 @synthesize labelForFBUserName;
+@synthesize buttonforShareManualPicture;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -118,6 +119,76 @@
 
 }
 
+
+- (IBAction)fnForPicUploadButtonPressed:(id)sender
+{
+    // First check if we can use the native dialog, otherwise will
+    // use our own
+    BOOL displayedNativeDialog =
+    [FBDialogs presentOSIntegratedShareDialogModallyFrom:self initialText:@"" image:[UIImage imageNamed:@"Untitled.png"] url:[NSURL URLWithString:@"https://developers.facebook.com/ios"] handler:^(FBOSIntegratedShareDialogResult result, NSError *error) {
+        // Only show the error if it is not due to the dialog
+        // not being supporte, i.e. code = 7, otherwise ignore
+        // because our fallback will show the share view controller.
+        if (error && [error code] == 7) {
+            return;
+        }
+        
+        NSString *alertText = @"";
+        if (error) {
+            alertText = [NSString stringWithFormat:
+                         @"error: domain = %@, code = %d",
+                         error.domain, error.code];
+        } else if (result == FBNativeDialogResultSucceeded) {
+            alertText = @"Posted successfully.";
+        }
+        if (![alertText isEqualToString:@""]) {
+            // Show the result in an alert
+            [[[UIAlertView alloc] initWithTitle:@"Result"
+                                        message:alertText
+                                       delegate:self
+                              cancelButtonTitle:@"OK!"
+                              otherButtonTitles:nil]
+             show];
+        }
+    }];
+    
+    // Fallback, show the view controller that will post using me/feed
+    if (!displayedNativeDialog) {
+    }
+
+}
+
+- (IBAction)fnForManualPicUploadButtonPressed:(id)sender
+{
+    UIImage *img = [UIImage imageNamed:@"oab_white.png"];
+
+    NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
+    [params setObject:@"Uploading white Image through OAB sample code" forKey:@"message"];
+    [params setObject:UIImagePNGRepresentation(img) forKey:@"source"];
+    buttonforShareManualPicture.enabled = NO; //for not allowing multiple hits
+
+    [FBRequestConnection startWithGraphPath:@"me/photos"
+                                 parameters:params
+                                 HTTPMethod:@"POST"
+                          completionHandler:^(FBRequestConnection *connection,
+                                              id result,
+                                              NSError *error)
+     {
+         
+         if (error)
+         {
+             //showing an alert for failure
+             NSLog(@"Unable to share the photo please try later.");
+
+         }
+         else
+         {
+             //showing an alert for success
+             NSLog(@"Shared the photo successfully");
+         }
+         buttonforShareManualPicture.enabled = YES;
+     }];
+}
 
 #pragma mark - for FACEBOOK sharing
 

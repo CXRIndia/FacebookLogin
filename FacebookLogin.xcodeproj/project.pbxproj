@@ -11,6 +11,7 @@
 		2B42EA5C172A409D007B9809 /* ViewControllerForFaceBookFriends.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42EA5A172A409D007B9809 /* ViewControllerForFaceBookFriends.xib */; };
 		2B42EA61172A4431007B9809 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B42EA5F172A4430007B9809 /* ViewController.m */; };
 		2B42EA62172A4431007B9809 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42EA60172A4430007B9809 /* ViewController.xib */; };
+		2B57A0AC176733740014DCF7 /* oab_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B57A0AB176733740014DCF7 /* oab_white.png */; };
 		2B7128241728113A0026730B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7128231728113A0026730B /* UIKit.framework */; };
 		2B7128261728113A0026730B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7128251728113A0026730B /* Foundation.framework */; };
 		2B7128281728113A0026730B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7128271728113A0026730B /* CoreGraphics.framework */; };
@@ -42,6 +43,7 @@
 		2B42EA5E172A4430007B9809 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2B42EA5F172A4430007B9809 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2B42EA60172A4430007B9809 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		2B57A0AB176733740014DCF7 /* oab_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oab_white.png; sourceTree = "<group>"; };
 		2B71281F1728113A0026730B /* FacebookLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7128231728113A0026730B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B7128251728113A0026730B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,7 +60,7 @@
 		2B712841172811EC0026730B /* ViewControllerForFBLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerForFBLogin.m; sourceTree = "<group>"; };
 		2B712842172811EC0026730B /* ViewControllerForFBLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerForFBLogin.xib; sourceTree = "<group>"; };
 		2B7128471728140A0026730B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2B712849172815F70026730B /* topLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topLogo.png; sourceTree = "<group>"; };
+		2B712849172815F70026730B /* topLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topLogo.png; path = FacebookLogin/topLogo.png; sourceTree = "<group>"; };
 		2B71284B1728184A0026730B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		2B71284D172823DE0026730B /* ViewControllerForHomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerForHomeScreen.h; sourceTree = "<group>"; };
 		2B71284E172823DE0026730B /* ViewControllerForHomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerForHomeScreen.m; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		2B712856172826490026730B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2B7128581728264F0026730B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2B71285A172826FE0026730B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		2B71285C1728289E0026730B /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled.png; sourceTree = "<group>"; };
+		2B71285C1728289E0026730B /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Untitled.png; path = FacebookLogin/Untitled.png; sourceTree = "<group>"; };
 		2B71285E172828AA0026730B /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled.png; sourceTree = "<group>"; };
 		2B712860172829F90026730B /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,11 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B57A0AA176733160014DCF7 /* Sample Images */ = {
+			isa = PBXGroup;
+			children = (
+				2B57A0AB176733740014DCF7 /* oab_white.png */,
+				2B71285C1728289E0026730B /* Untitled.png */,
+				2B712849172815F70026730B /* topLogo.png */,
+				2B71285E172828AA0026730B /* Untitled.png */,
+			);
+			name = "Sample Images";
+			sourceTree = "<group>";
+		};
 		2B7128141728113A0026730B = {
 			isa = PBXGroup;
 			children = (
-				2B71285E172828AA0026730B /* Untitled.png */,
 				2B7128291728113A0026730B /* FacebookLogin */,
+				2B57A0AA176733160014DCF7 /* Sample Images */,
 				2B7128221728113A0026730B /* Frameworks */,
 				2B7128201728113A0026730B /* Products */,
 			);
@@ -152,8 +165,6 @@
 		2B71282A1728113A0026730B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2B71285C1728289E0026730B /* Untitled.png */,
-				2B712849172815F70026730B /* topLogo.png */,
 				2B71282B1728113A0026730B /* FacebookLogin-Info.plist */,
 				2B71282C1728113A0026730B /* InfoPlist.strings */,
 				2B71282F1728113A0026730B /* main.m */,
@@ -228,6 +239,7 @@
 				2B71285F172828AA0026730B /* Untitled.png in Resources */,
 				2B42EA5C172A409D007B9809 /* ViewControllerForFaceBookFriends.xib in Resources */,
 				2B42EA62172A4431007B9809 /* ViewController.xib in Resources */,
+				2B57A0AC176733740014DCF7 /* oab_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,9 @@ Following functionalities have been covered in this sample :
 
 6) Show facebook friends who are using same app and invite them.
 
+7) Upload photo in background
+
+8) Upload photo using webdialog
 
 
 

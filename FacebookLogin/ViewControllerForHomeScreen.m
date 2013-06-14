@@ -190,6 +190,40 @@
      }];
 }
 
+- (IBAction)fnForFBBackgroundShareButtonPressed:(id)sender
+{
+    NSMutableDictionary *postParams =
+    [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+     @"http://oabstudios.com/#home", @"link",
+     @"http://oabstudios.com/assest/images/topLogo.png", @"picture",
+     @"SUPPLYING ARMS FOR THE DIGITAL REVOLUTION..", @"name",
+     @"http://oabstudios.com", @"caption",
+     @"This is facebook sample by OAB studios", @"message",
+     @"100000520313424",@"tags",
+     @"152041044960386",@"place",
+     
+     nil];
+    
+    [FBRequestConnection
+     startWithGraphPath:@"me/feed"
+     parameters:postParams
+     HTTPMethod:@"POST"
+     completionHandler:^(FBRequestConnection *connection,
+                         id result,
+                         NSError *error) {
+         NSString *alertText;
+         if (error) {
+             alertText = [NSString stringWithFormat:
+                          @"error: domain = %@, code = %d",
+                          error.domain, error.code];
+         } else {
+             alertText = [NSString stringWithFormat:
+                          @"Posted action, id: %@",
+                          [result objectForKey:@"id"]];
+         }
+     }];
+
+}
 #pragma mark - for FACEBOOK sharing
 
 /**

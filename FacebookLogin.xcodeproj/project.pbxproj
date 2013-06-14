@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2B42EA5B172A409D007B9809 /* ViewControllerForFaceBookFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B42EA59172A409D007B9809 /* ViewControllerForFaceBookFriends.m */; };
 		2B42EA5C172A409D007B9809 /* ViewControllerForFaceBookFriends.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42EA5A172A409D007B9809 /* ViewControllerForFaceBookFriends.xib */; };
-		2B42EA61172A4431007B9809 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B42EA5F172A4430007B9809 /* ViewController.m */; };
-		2B42EA62172A4431007B9809 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42EA60172A4430007B9809 /* ViewController.xib */; };
 		2B57A0AC176733740014DCF7 /* oab_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B57A0AB176733740014DCF7 /* oab_white.png */; };
 		2B7128241728113A0026730B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7128231728113A0026730B /* UIKit.framework */; };
 		2B7128261728113A0026730B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7128251728113A0026730B /* Foundation.framework */; };
@@ -40,9 +38,6 @@
 		2B42EA58172A409D007B9809 /* ViewControllerForFaceBookFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerForFaceBookFriends.h; sourceTree = "<group>"; };
 		2B42EA59172A409D007B9809 /* ViewControllerForFaceBookFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerForFaceBookFriends.m; sourceTree = "<group>"; };
 		2B42EA5A172A409D007B9809 /* ViewControllerForFaceBookFriends.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerForFaceBookFriends.xib; sourceTree = "<group>"; };
-		2B42EA5E172A4430007B9809 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2B42EA5F172A4430007B9809 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2B42EA60172A4430007B9809 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		2B57A0AB176733740014DCF7 /* oab_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oab_white.png; sourceTree = "<group>"; };
 		2B71281F1728113A0026730B /* FacebookLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7128231728113A0026730B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -155,9 +150,6 @@
 				2B42EA59172A409D007B9809 /* ViewControllerForFaceBookFriends.m */,
 				2B42EA5A172A409D007B9809 /* ViewControllerForFaceBookFriends.xib */,
 				2B71282A1728113A0026730B /* Supporting Files */,
-				2B42EA5E172A4430007B9809 /* ViewController.h */,
-				2B42EA5F172A4430007B9809 /* ViewController.m */,
-				2B42EA60172A4430007B9809 /* ViewController.xib */,
 			);
 			path = FacebookLogin;
 			sourceTree = "<group>";
@@ -238,7 +230,6 @@
 				2B71285D1728289E0026730B /* Untitled.png in Resources */,
 				2B71285F172828AA0026730B /* Untitled.png in Resources */,
 				2B42EA5C172A409D007B9809 /* ViewControllerForFaceBookFriends.xib in Resources */,
-				2B42EA62172A4431007B9809 /* ViewController.xib in Resources */,
 				2B57A0AC176733740014DCF7 /* oab_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +246,6 @@
 				2B712843172811EC0026730B /* ViewControllerForFBLogin.m in Sources */,
 				2B712850172823DE0026730B /* ViewControllerForHomeScreen.m in Sources */,
 				2B42EA5B172A409D007B9809 /* ViewControllerForFaceBookFriends.m in Sources */,
-				2B42EA61172A4431007B9809 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

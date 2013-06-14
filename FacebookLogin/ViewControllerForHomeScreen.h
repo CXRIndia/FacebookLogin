@@ -40,4 +40,6 @@
 - (IBAction)fnForFBShareButtonPressed:(id)sender;
 - (IBAction)fnForPicUploadButtonPressed:(id)sender;
 - (IBAction)fnForManualPicUploadButtonPressed:(id)sender;
+- (IBAction)fnForFBBackgroundShareButtonPressed:(id)sender;
+
 @end

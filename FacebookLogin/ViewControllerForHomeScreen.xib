@@ -130,7 +130,30 @@
 					<object class="IBUIButton" id="89986086">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 337}, {280, 44}}</string>
+						<string key="NSFrame">{{20, 337}, {134, 44}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="546144413"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<reference key="IBUIBackgroundColor" ref="634017862"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<string key="IBUINormalTitle">Share using dialog</string>
+						<reference key="IBUIHighlightedTitleColor" ref="91730985"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="485157596"/>
+						<reference key="IBUIFontDescription" ref="755820627"/>
+						<reference key="IBUIFont" ref="85497763"/>
+					</object>
+					<object class="IBUIButton" id="546144413">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{170, 337}, {130, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1012608345"/>
@@ -140,7 +163,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Share using FB dialog</string>
+						<string key="IBUINormalTitle">Share in background</string>
 						<reference key="IBUIHighlightedTitleColor" ref="91730985"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -455,6 +478,15 @@
 					</object>
 					<int key="connectionID">47</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">fnForFBShareBackgroundButtonPressed:</string>
+						<reference key="source" ref="546144413"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">50</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -475,10 +507,11 @@
 							<reference ref="664196514"/>
 							<reference ref="511025560"/>
 							<reference ref="1012608345"/>
-							<reference ref="89986086"/>
 							<reference ref="907235229"/>
 							<reference ref="1001200019"/>
 							<reference ref="90107358"/>
+							<reference ref="546144413"/>
+							<reference ref="89986086"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -549,6 +582,11 @@
 						<reference key="object" ref="90107358"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">48</int>
+						<reference key="object" ref="546144413"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -567,13 +605,14 @@
 				<string key="38.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="41.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="45.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">47</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -584,6 +623,7 @@
 						<string key="fnForFBAppFriendsButtonPressed:">id</string>
 						<string key="fnForFBBackgroundShareButtonPressed:">id</string>
 						<string key="fnForFBFriendsButtonPressed:">id</string>
+						<string key="fnForFBShareBackgroundButtonPressed:">id</string>
 						<string key="fnForFBShareButtonPressed:">id</string>
 						<string key="fnForLogOutButtonPressed:">id</string>
 						<string key="fnForManualPicUploadButtonPressed:">id</string>
@@ -600,6 +640,10 @@
 						</object>
 						<object class="IBActionInfo" key="fnForFBFriendsButtonPressed:">
 							<string key="name">fnForFBFriendsButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="fnForFBShareBackgroundButtonPressed:">
+							<string key="name">fnForFBShareBackgroundButtonPressed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="fnForFBShareButtonPressed:">

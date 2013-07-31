@@ -122,10 +122,10 @@ NSString *const SCSessionStateChangedNotification = @"com.oabtesting.FacebookLog
                              
                              NSLog(@"%@,%@,%@",[user objectForKey:@"id"],[user objectForKey:@"email"],user.first_name);
                              
-                             FBUserId=[user objectForKey:@"id"];
-                             FBUserName=user.first_name;
-                             FBLastName=user.last_name;
-                             FBUserEmail=[user objectForKey:@"email"];
+                             [[NSUserDefaults standardUserDefaults] setValue:[user objectForKey:@"id"] forKey:@"FBUserId"];
+                             [[NSUserDefaults standardUserDefaults] setValue:user.first_name forKey:@"FBUserName"];
+                             [[NSUserDefaults standardUserDefaults] setValue:user.last_name forKey:@"FBLastName"];
+                             [[NSUserDefaults standardUserDefaults] setValue:[user objectForKey:@"email"] forKey:@"FBUserEmail"];
 
                              [ViewControllerForFBLogin_obj LoadDashBoardScreen];
                          }

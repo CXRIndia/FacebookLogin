@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B29017B17A8DC7800262E24 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29017A17A8DC7800262E24 /* FacebookSDK.framework */; };
 		2B42EA5B172A409D007B9809 /* ViewControllerForFaceBookFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B42EA59172A409D007B9809 /* ViewControllerForFaceBookFriends.m */; };
 		2B42EA5C172A409D007B9809 /* ViewControllerForFaceBookFriends.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B42EA5A172A409D007B9809 /* ViewControllerForFaceBookFriends.xib */; };
 		2B57A0AC176733740014DCF7 /* oab_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B57A0AB176733740014DCF7 /* oab_white.png */; };
@@ -22,10 +23,8 @@
 		2B712844172811EC0026730B /* ViewControllerForFBLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B712842172811EC0026730B /* ViewControllerForFBLogin.xib */; };
 		2B7128481728140A0026730B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7128471728140A0026730B /* Default-568h@2x.png */; };
 		2B71284A172815F70026730B /* topLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B712849172815F70026730B /* topLogo.png */; };
-		2B71284C1728184A0026730B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B71284B1728184A0026730B /* FacebookSDK.framework */; };
 		2B712850172823DE0026730B /* ViewControllerForHomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B71284E172823DE0026730B /* ViewControllerForHomeScreen.m */; };
 		2B712851172823DE0026730B /* ViewControllerForHomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B71284F172823DE0026730B /* ViewControllerForHomeScreen.xib */; };
-		2B712853172826170026730B /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B712852172826160026730B /* FBUserSettingsViewResources.bundle */; };
 		2B7128551728262C0026730B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7128541728262C0026730B /* AdSupport.framework */; };
 		2B712857172826490026730B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B712856172826490026730B /* Social.framework */; };
 		2B7128591728264F0026730B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7128581728264F0026730B /* Accounts.framework */; };
@@ -35,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B29017A17A8DC7800262E24 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		2B42EA58172A409D007B9809 /* ViewControllerForFaceBookFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerForFaceBookFriends.h; sourceTree = "<group>"; };
 		2B42EA59172A409D007B9809 /* ViewControllerForFaceBookFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerForFaceBookFriends.m; sourceTree = "<group>"; };
 		2B42EA5A172A409D007B9809 /* ViewControllerForFaceBookFriends.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerForFaceBookFriends.xib; sourceTree = "<group>"; };
@@ -56,11 +56,9 @@
 		2B712842172811EC0026730B /* ViewControllerForFBLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerForFBLogin.xib; sourceTree = "<group>"; };
 		2B7128471728140A0026730B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2B712849172815F70026730B /* topLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topLogo.png; path = FacebookLogin/topLogo.png; sourceTree = "<group>"; };
-		2B71284B1728184A0026730B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		2B71284D172823DE0026730B /* ViewControllerForHomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerForHomeScreen.h; sourceTree = "<group>"; };
 		2B71284E172823DE0026730B /* ViewControllerForHomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerForHomeScreen.m; sourceTree = "<group>"; };
 		2B71284F172823DE0026730B /* ViewControllerForHomeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerForHomeScreen.xib; sourceTree = "<group>"; };
-		2B712852172826160026730B /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		2B7128541728262C0026730B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		2B712856172826490026730B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2B7128581728264F0026730B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -75,11 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B29017B17A8DC7800262E24 /* FacebookSDK.framework in Frameworks */,
 				2B71285B172826FE0026730B /* Security.framework in Frameworks */,
 				2B7128591728264F0026730B /* Accounts.framework in Frameworks */,
 				2B712857172826490026730B /* Social.framework in Frameworks */,
 				2B7128551728262C0026730B /* AdSupport.framework in Frameworks */,
-				2B71284C1728184A0026730B /* FacebookSDK.framework in Frameworks */,
 				2B7128241728113A0026730B /* UIKit.framework in Frameworks */,
 				2B7128261728113A0026730B /* Foundation.framework in Frameworks */,
 				2B7128281728113A0026730B /* CoreGraphics.framework in Frameworks */,
@@ -121,12 +119,11 @@
 		2B7128221728113A0026730B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B29017A17A8DC7800262E24 /* FacebookSDK.framework */,
 				2B71285A172826FE0026730B /* Security.framework */,
 				2B7128581728264F0026730B /* Accounts.framework */,
 				2B712856172826490026730B /* Social.framework */,
 				2B7128541728262C0026730B /* AdSupport.framework */,
-				2B712852172826160026730B /* FBUserSettingsViewResources.bundle */,
-				2B71284B1728184A0026730B /* FacebookSDK.framework */,
 				2B7128231728113A0026730B /* UIKit.framework */,
 				2B7128251728113A0026730B /* Foundation.framework */,
 				2B7128271728113A0026730B /* CoreGraphics.framework */,
@@ -226,7 +223,6 @@
 				2B7128481728140A0026730B /* Default-568h@2x.png in Resources */,
 				2B71284A172815F70026730B /* topLogo.png in Resources */,
 				2B712851172823DE0026730B /* ViewControllerForHomeScreen.xib in Resources */,
-				2B712853172826170026730B /* FBUserSettingsViewResources.bundle in Resources */,
 				2B71285D1728289E0026730B /* Untitled.png in Resources */,
 				2B71285F172828AA0026730B /* Untitled.png in Resources */,
 				2B42EA5C172A409D007B9809 /* ViewControllerForFaceBookFriends.xib in Resources */,

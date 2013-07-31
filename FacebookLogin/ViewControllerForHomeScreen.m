@@ -47,10 +47,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationController.navigationBar setHidden:YES];
-    [labelForFBUSerID setText:[NSString stringWithFormat:@"Facebook ID :- %@",FBUserId]];
-    [labelForFBUserName setText:[NSString stringWithFormat:@"Facebook UserName :- %@",FBUserName]];
-    [labelForFBUserLastName setText:[NSString stringWithFormat:@"Facebook LastName :- %@",FBLastName]];
-    [labelForFBUserEmail setText:[NSString stringWithFormat:@"Facebook Email :- %@",FBUserEmail]];
+
+    [labelForFBUSerID setText:[NSString stringWithFormat:@"Facebook ID :- %@",[[NSUserDefaults standardUserDefaults] valueForKey:@"FBUserId"]]];
+    [labelForFBUserName setText:[NSString stringWithFormat:@"Facebook UserName :- %@",[[NSUserDefaults standardUserDefaults] valueForKey:@"FBUserName"]]];
+    [labelForFBUserLastName setText:[NSString stringWithFormat:@"Facebook LastName :- %@",[[NSUserDefaults standardUserDefaults] valueForKey:@"FBLastName"]]];
+    [labelForFBUserEmail setText:[NSString stringWithFormat:@"Facebook Email :- %@",[[NSUserDefaults standardUserDefaults] valueForKey:@"FBUserEmail"]]];
 }
 #pragma mark - button pressed
 
@@ -79,8 +80,12 @@
      @"details description will go here", @"description",
      @"http://oabstudios.com/#home", @"link",
      @"http://oabstudios.com/assest/images/topLogo.png", @"picture",
+     @"100004971782748",@"tags",
+     @"100004459930987",@"to",
+     @"152041044960386",@"place",
      nil];
     
+
     // Invoke the dialog
     [FBWebDialogs presentFeedDialogModallyWithSession:nil
                                            parameters:params
@@ -119,6 +124,24 @@
 
 }
 
+- (IBAction)fnForFBShareBackgroundButtonPressed:(id)sender
+{
+    
+    id<FBOpenGraphAction> action = (id<FBOpenGraphAction>)[FBGraphObject graphObject];
+    [action setObject:@"10" forKey:@"puzzle"];
+    
+    [FBDialogs presentShareDialogWithOpenGraphAction:action
+                                          actionType:@"oabsampleapp:solve"
+                                 previewPropertyName:@"puzzle"
+                                             handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                                 if(error) {
+                                                     NSLog(@"Error: %@", error.description);
+                                                 } else {
+                                                     NSLog(@"Success!");
+                                                 }
+                                             }];
+    
+}
 
 - (IBAction)fnForPicUploadButtonPressed:(id)sender
 {

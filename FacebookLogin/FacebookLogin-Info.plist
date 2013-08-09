@@ -37,14 +37,18 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb367997273320663</string>
+				<string>fb217814355029728</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>${FB_BUNDLE_VERSION}</string>
+	<key>FacebookDisplayName</key>
+	<string>NightUp</string>
 	<key>FacebookAppID</key>
-	<string>367997273320663</string>
+	<string>217814355029728</string>
+	<key>FacebookBundleName</key>
+	<string>FacebookSDKOverrides</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>

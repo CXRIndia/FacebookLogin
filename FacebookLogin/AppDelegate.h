@@ -32,7 +32,6 @@
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) UIWindow *window;
 
-
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
 
 - (BOOL)openSessionWithoutAllowLoginUI:(BOOL)allowLoginUI;

@@ -214,6 +214,7 @@ NSString *const SCSessionStateChangedNotification = @"com.oabtesting.FacebookLog
                                          completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
                                              [self sessionStateChanged:session state:state error:error];
                                          }];
+    
 }
 
 - (BOOL)openSessionWithoutAllowLoginUI:(BOOL)allowLoginUI
@@ -231,10 +232,10 @@ NSString *const SCSessionStateChangedNotification = @"com.oabtesting.FacebookLog
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    
-    
     return [FBSession.activeSession handleOpenURL:url];
 }
+
+
 
 + (NSString *)FBErrorCodeDescription:(FBErrorCode) code {
     switch(code){

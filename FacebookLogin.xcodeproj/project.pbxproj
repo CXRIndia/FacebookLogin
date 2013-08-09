@@ -31,6 +31,7 @@
 		2B71285B172826FE0026730B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B71285A172826FE0026730B /* Security.framework */; };
 		2B71285D1728289E0026730B /* Untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B71285C1728289E0026730B /* Untitled.png */; };
 		2B71285F172828AA0026730B /* Untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B71285E172828AA0026730B /* Untitled.png */; };
+		2B970A8117AA976900EC4FC5 /* FacebookSDKOverrides.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B970A8017AA976900EC4FC5 /* FacebookSDKOverrides.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		2B71285C1728289E0026730B /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Untitled.png; path = FacebookLogin/Untitled.png; sourceTree = "<group>"; };
 		2B71285E172828AA0026730B /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled.png; sourceTree = "<group>"; };
 		2B712860172829F90026730B /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		2B970A8017AA976900EC4FC5 /* FacebookSDKOverrides.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKOverrides.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		2B7128221728113A0026730B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B970A8017AA976900EC4FC5 /* FacebookSDKOverrides.bundle */,
 				2B29017A17A8DC7800262E24 /* FacebookSDK.framework */,
 				2B71285A172826FE0026730B /* Security.framework */,
 				2B7128581728264F0026730B /* Accounts.framework */,
@@ -227,6 +230,7 @@
 				2B71285F172828AA0026730B /* Untitled.png in Resources */,
 				2B42EA5C172A409D007B9809 /* ViewControllerForFaceBookFriends.xib in Resources */,
 				2B57A0AC176733740014DCF7 /* oab_white.png in Resources */,
+				2B970A8117AA976900EC4FC5 /* FacebookSDKOverrides.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +325,8 @@
 				INFOPLIST_FILE = "FacebookLogin/FacebookLogin-Info.plist";
 				LIBRARY_SEARCH_PATHS = "\"$(SDKROOT)/usr/lib/system\"";
 				OTHER_LDFLAGS = (
-					"-lsqlite3.0",
 					"-lstdc++",
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -341,8 +345,8 @@
 				INFOPLIST_FILE = "FacebookLogin/FacebookLogin-Info.plist";
 				LIBRARY_SEARCH_PATHS = "\"$(SDKROOT)/usr/lib/system\"";
 				OTHER_LDFLAGS = (
-					"-lsqlite3.0",
 					"-lstdc++",
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

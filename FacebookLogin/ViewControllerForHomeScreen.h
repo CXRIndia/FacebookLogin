@@ -38,9 +38,8 @@
 - (IBAction)fnForFBFriendsButtonPressed:(id)sender;
 - (IBAction)fnForFBAppFriendsButtonPressed:(id)sender;
 - (IBAction)fnForFBShareButtonPressed:(id)sender;
-- (IBAction)fnForFBShareBackgroundButtonPressed:(id)sender;
+- (IBAction)fnForPostWithoutAuthButtonPressed:(id)sender;
 - (IBAction)fnForPicUploadButtonPressed:(id)sender;
 - (IBAction)fnForManualPicUploadButtonPressed:(id)sender;
-- (IBAction)fnForFBBackgroundShareButtonPressed:(id)sender;
-
+- (IBAction)fnForFBShareBackgroundButtonPressed:(id)sender;
 @end

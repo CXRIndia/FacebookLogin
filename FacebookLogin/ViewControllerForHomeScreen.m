@@ -80,6 +80,7 @@
      @"details description will go here", @"description",
      @"http://oabstudios.com/#home", @"link",
      @"http://oabstudios.com/assest/images/topLogo.png", @"picture",
+     @"100000105132554,100004971782748",@"tags",
      nil];
     
 
@@ -118,6 +119,7 @@
              }
          }
      }];
+    
 
 }
 
@@ -130,7 +132,8 @@
                                            defaultAudience:FBSessionDefaultAudienceFriends
                                               allowLoginUI:YES
                                          completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
-                                             if (FBSession.activeSession.isOpen && !error) {
+                                             if (FBSession.activeSession.isOpen && !error)
+                                             {
                                                  // Publish the story if permission was granted
                                                  [self publishStory];
                                              }
@@ -148,9 +151,9 @@
      @"http://nightuplife.com/nightup/", @"link",
      @"http://50.19.244.20/nightup_webapp_dev/event/event_images/1367669132.jpg", @"picture",
      @"NightUp gives you quick and easy access to exclusive events. Try it now!.", @"name",
-     @"www.nightuplife.com", @"caption",
-     @"I have booked a night out! \nEvent: Last Night in NY On: June 3, 10:30 PM - 04:00 AM", @"message",
-     @"100000520313424,100000371730747",@"tags",
+     @"This is all about nightup", @"caption",
+     @"I have booked a night out! \nEvent: Last Night in NY \nOn: June 3, 10:30 PM - 04:00 AM", @"message",
+     @"100000105132554,100004971782748",@"tags",
      @"121028137918729",@"place",
      nil];
     [FBRequestConnection
@@ -245,38 +248,27 @@
      }];
 }
 
-- (IBAction)fnForFBBackgroundShareButtonPressed:(id)sender
+- (IBAction)fnForPostWithoutAuthButtonPressed:(id)sender;
 {
-    NSMutableDictionary *postParams =
-    [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-     @"http://oabstudios.com/#home", @"link",
-     @"http://oabstudios.com/assest/images/topLogo.png", @"picture",
-     @"SUPPLYING ARMS FOR THE DIGITAL REVOLUTION..", @"name",
-     @"http://oabstudios.com", @"caption",
-     @"This is facebook sample by OAB studios", @"message",
-     @"100000520313424",@"tags",
-     @"152041044960386",@"place",
-     
-     nil];
+    NSURL* url = [NSURL URLWithString:@"http://www.scan2drive.com"];
+    /*[FBDialogs presentShareDialogWithLink:url
+                                  handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                      if(error) {
+                                          NSLog(@"Error: %@", error.description);
+                                      } else {
+                                          NSLog(@"Success!");
+                                      }
+                                  }];*/
     
-    [FBRequestConnection
-     startWithGraphPath:@"me/feed"
-     parameters:postParams
-     HTTPMethod:@"POST"
-     completionHandler:^(FBRequestConnection *connection,
-                         id result,
-                         NSError *error) {
-         NSString *alertText;
-         if (error) {
-             alertText = [NSString stringWithFormat:
-                          @"error: domain = %@, code = %d",
-                          error.domain, error.code];
-         } else {
-             alertText = [NSString stringWithFormat:
-                          @"Posted action, id: %@",
-                          [result objectForKey:@"id"]];
-         }
-     }];
+    [FBDialogs presentShareDialogWithLink:url name:@"This is OAB test" caption:@"iOS developement" description:@"we can not share more than this" picture:Nil clientState:Nil handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                      if(error) {
+                                          NSLog(@"Error: %@", error.description);
+                                      } else {
+                                          NSLog(@"Success!");
+                                      }
+                                  }];
+
+    
 
 }
 #pragma mark - for FACEBOOK sharing

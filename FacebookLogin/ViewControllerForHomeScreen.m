@@ -251,26 +251,136 @@
 - (IBAction)fnForPostWithoutAuthButtonPressed:(id)sender;
 {
     NSURL* url = [NSURL URLWithString:@"http://www.scan2drive.com"];
-    /*[FBDialogs presentShareDialogWithLink:url
+    [FBDialogs presentShareDialogWithLink:url
                                   handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
                                       if(error) {
                                           NSLog(@"Error: %@", error.description);
                                       } else {
                                           NSLog(@"Success!");
                                       }
-                                  }];*/
-    
-    [FBDialogs presentShareDialogWithLink:url name:@"This is OAB test" caption:@"iOS developement" description:@"we can not share more than this" picture:Nil clientState:Nil handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
-                                      if(error) {
-                                          NSLog(@"Error: %@", error.description);
-                                      } else {
-                                          NSLog(@"Success!");
-                                      }
                                   }];
-
-    
-
 }
+
+- (IBAction)fnForFBRequestButtonPressed:(id)sender
+{
+    // when you dont know about user ID
+    [self sendRequest];
+    
+    //When you have user's ID use this
+    //[self sendRequest:[pass your array here]];
+}
+
+#pragma mark - Sedn user app request
+/*
+ * Send a user to user request
+ */
+- (void)sendRequest {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization
+                        dataWithJSONObject:@{
+                                             @"Try_this_challenge": @"5",
+                                             @"OAB_studios": @"1"}
+                        options:0
+                        error:&error];
+    if (!jsonData) {
+        NSLog(@"JSON error: %@", error);
+        return;
+    }
+    
+    NSString *giftStr = [[NSString alloc]
+                         initWithData:jsonData
+                         encoding:NSUTF8StringEncoding];
+    
+    NSMutableDictionary* params = [@{@"data" : giftStr} mutableCopy];
+    
+    // Display the requests dialog
+    [FBWebDialogs
+     presentRequestsDialogModallyWithSession:nil
+     message:@"Learn how to make your iOS apps social."
+     title:nil
+     parameters:params
+     handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
+         if (error) {
+             // Error launching the dialog or sending the request.
+             NSLog(@"Error sending request.");
+         } else {
+             if (result == FBWebDialogResultDialogNotCompleted) {
+                 // User clicked the "x" icon
+                 NSLog(@"User canceled request.");
+             } else {
+                 // Handle the send request callback
+                 NSDictionary *urlParams = [self parseURLParams:[resultURL query]];
+                 if (![urlParams valueForKey:@"request"]) {
+                     // User clicked the Cancel button
+                     NSLog(@"User canceled request.");
+                 } else {
+                     // User clicked the Send button
+                     NSString *requestID = [urlParams valueForKey:@"request"];
+                     NSLog(@"Request ID: %@", requestID);
+                 }
+             }
+         }
+     }];
+}
+
+/*
+ * Send a user to user request, with a targeted list
+ */
+- (void)sendRequest:(NSArray *) targeted {
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization
+                        dataWithJSONObject:@{
+                                             @"Try_this_challenge": @"5",
+                                             @"OAB_studios": @"1"}
+                        options:0
+                        error:&error];
+    if (error) {
+        NSLog(@"JSON error: %@", error);
+        return;
+    }
+    
+    NSString *giftStr = [[NSString alloc]
+                         initWithData:jsonData
+                         encoding:NSUTF8StringEncoding];
+    NSMutableDictionary* params = [@{@"data" : giftStr} mutableCopy];
+    
+    // Filter and only show targeted friends
+    if (targeted != nil && [targeted count] > 0) {
+        NSString *selectIDsStr = [targeted componentsJoinedByString:@","];
+        params[@"suggestions"] = selectIDsStr;
+    }
+    
+    // Display the requests dialog
+    [FBWebDialogs
+     presentRequestsDialogModallyWithSession:nil
+     message:@"Learn how to make your iOS apps social."
+     title:nil
+     parameters:params
+     handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
+         if (error) {
+             // Error launching the dialog or sending request.
+             NSLog(@"Error sending request.");
+         } else {
+             if (result == FBWebDialogResultDialogNotCompleted) {
+                 // User clicked the "x" icon
+                 NSLog(@"User canceled request.");
+             } else {
+                 // Handle the send request callback
+                 NSDictionary *urlParams = [self parseURLParams:[resultURL query]];
+                 if (![urlParams valueForKey:@"request"]) {
+                     // User clicked the Cancel button
+                     NSLog(@"User canceled request.");
+                 } else {
+                     // User clicked the Send button
+                     NSString *requestID = [urlParams valueForKey:@"request"];
+                     NSLog(@"Request ID: %@", requestID);
+                 }
+             }
+         }
+     }];
+}
+
+
 #pragma mark - for FACEBOOK sharing
 
 /**

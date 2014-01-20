@@ -52,3 +52,7 @@ Or you can refer more details here :
 http://stackoverflow.com/questions/12644229/ios-6-facebook-posting-procedure-ends-up-with-remote-app-id-does-not-match-stor
 
 
+For newly added Request topic you can directly refer to Facebook documentation :
+
+https://developers.facebook.com/docs/games/mobile/ios-tutorial/#requests
+

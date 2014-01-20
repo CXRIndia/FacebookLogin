@@ -22,7 +22,7 @@ Following functionalities have been covered in this sample :
 
 8) Upload photo using webdialog
 
-
+9) Send app request using dialog and frictionless request.
 
 Meanwhile you can download facebook SDK from Link below :
 
